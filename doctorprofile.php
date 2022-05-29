@@ -1,3 +1,8 @@
+
+<?php
+include("doctorprofile_get.php");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,6 +27,8 @@
 </head>
 
 <body>
+
+
     <!--navbar-->
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
         <ul class="navbar-nav">
@@ -49,6 +56,8 @@
         </a>
     </nav>
     <!--profile-->
+
+
     <div class="container">
         <div class="row">
             <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
@@ -69,6 +78,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
                 <div class="card" id="c2">
                     <div class="card-body">
@@ -79,7 +89,7 @@
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="form-info">
-                                    <label for="Name">Name</label>
+                                    <label for="Name">Username</label>
                                     <p>Enter name</p>
                                 </div>
                             </div>
@@ -130,171 +140,11 @@
                                 </div>
                             </div>
                         </div>
-                        <!--
-                            <div class="carousel-slid" id="slide">
-                                <ol class="carousel-indicator">
-                                    <li data-target="#slide" data-slide="0"></li>
-                                    <li data-target="#slide" data-slide="1"></li>
-                                    <li data-target="#slide" data-slide="2"></li>
-                                </ol>
-                                <div class="carousel-inner">
-                                    <div class="carousel-item"></div>
-                                    <div>
-                                        <img src="css/logo.png" alt="" class="w-10">
-                                    </div>
-                                    <div class="carousel-item"></div>
-                                    <div>
-                                        <img src="css/logo.png"alt="" class="w-10">
-                                    </div>
-                                    <div class="carousel-item"></div>
-                                    <div>
-                                        <img src="css/logo.png"alt="" class="w-10">
-                                    </div>
-                                </div>
-                                <a href="#slide" class="carousel-control-next" data-slide="next" >
-                                    <span class="carousel-control-next-icon"></span>
-                                </a>
-                                <a href="#slide" class="carousel-control-prev" data-slide="prev" >
-                                    <span class="carousel-control-prev-icon"></span>
-                                </a>
-                            </div>
-                        -->
-                        <div id="slide" class="carousel slide container w-100">
-                            <ol class="carousel-indicators">
-                                <li data-target="#slide" data-slide-to="0" class="active"></li>
-                                <li data-target="#slide" data-slide-to="1"></li>
-                                <li data-target="#slide" data-slide-to="2"></li>
-                            </ol>
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="contianer">
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <div class="card" id="cards">
-                                                    <div class="card-body">
-                                                        <div class="card1" style="text-align: center;">
-                                                            <p>8 am</p>
-                                                            <p> 12 may</p>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="col-4">
-                                                <div class="card" id="cards">
-                                                    <div class="card-body">
-                                                        <div class="card1" style="text-align: center;">
-                                                            <p>8:30 am</p>
-                                                            <p> 12 may</p>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="col-4">
-                                                <div class="card" id="cards">
-                                                    <div class="card-body">
-                                                        <div class="card1" style="text-align: center;">
-                                                            <p>9 am</p>
-                                                            <p> 12 may</p>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="contianer">
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <div class="card" id="cards">
-                                                    <div class="card-body">
-                                                        <div class="card1" style="text-align: center;">
-                                                            <p>9:30 am</p>
-                                                            <p> 12 may</p>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="col-4">
-                                                <div class="card"id="cards">
-                                                    <div class="card-body">
-                                                        <div class="card1" style="text-align: center;">
-                                                            <p>10 am</p>
-                                                            <p> 12 may</p>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="col-4">
-                                                <div class="card"id="cards">
-                                                    <div class="card-body">
-                                                        <div class="card1" style="text-align: center;">
-                                                            <p>8 am</p>
-                                                            <p> 13 may</p>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="contianer">
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <div class="card"id="cards">
-                                                    <div class="card-body">
-                                                        <div class="card1" style="text-align: center;">
-                                                            <p>10 am</p>
-                                                            <p> 13 may</p>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="col-4">
-                                                <div class="card"id="cards">
-                                                    <div class="card-body">
-                                                        <div class="card1" style="text-align: center;">
-                                                            <p>10 am</p>
-                                                            <p> 14 may</p>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="col-4">
-                                                <div class="card"id="cards">
-                                                    <div class="card-body">
-                                                        <div class="card1" style="text-align: center;">
-                                                            <p>10 am</p>
-                                                            <p> 15 may</p>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a class="carousel-control-prev" href="#slide" data-slide="prev">
-                                    <span class="carousel-control-prev-icon"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="carousel-control-next" href="#slide" data-slide="next">
-                                    <span class="carousel-control-next-icon"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                            </div>
-                        </div>
+                        
+                       
                         <br><br>
                         <div class="col-md-10 text-center">
+                        <div class="btn btn-primary">Add Available Time</div>
                             <div class="btn btn-outline-primary">Edit</div>
                         </div>
                     </div>
@@ -319,6 +169,8 @@
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/profile.js"></script>
+
+    
 </body>
 
 </html>

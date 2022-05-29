@@ -2,6 +2,7 @@
 
 session_start();
 include( 'include/connections.php' );
+include( 'include/functions.php' );
 /*
 if ( isset( $_POST[ 'username' ] ) && isset( $_POST[ 'password' ] ) ) {
     $username = stripcslashes( strtolower( $_POST[ 'username' ] ) );
@@ -26,14 +27,30 @@ if ( isset( $_POST[ 'username' ] ) && isset( $_POST[ 'password' ] ) ) {
         include( 'login.php' );
     }
 }*/
+$msg='';
 if(isset($_POST['submit'])){
     $username=$_POST['username'];
     $password=$_POST['password'];
     $sql = "SELECT id,username FROM `user` WHERE username='$username' AND password='$password'";
     $result = mysqli_query( $conn, $sql );
-    $row = mysqli_fetch_array( $result );
-    if($row){
-        header("location:userlanding.php");
+    //$row = mysqli_fetch_array( $result );
+    $count=mysqli_num_rows($result);
+    if($count>0){
+        //header("location:userlanding.php");
+
+        $row=mysqli_fetch_assoc($result);
+		if($row['status']=='0'){
+			$msg="Account deactivated";	
+		}else{
+			$_SESSION['ADMIN_LOGIN']='yes';
+			$_SESSION['ADMIN_ID']=$row['id'];
+			$_SESSION['ADMIN_USERNAME']=$username;
+			$_SESSION['ADMIN_ROLE']=$row['role'];
+			header('location:doctorprofile.php');
+			die();
+		}
+
+
     }
     else{
         $user_error = '<div class="alert alert-danger text-center">wrong Username or password.</div>';
@@ -42,3 +59,5 @@ if(isset($_POST['submit'])){
 
 }
 ?>
+
+
